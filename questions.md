@@ -9,6 +9,7 @@ Diego Miquélez de Mendiluce
 Python 3.11 added a feature improving the traceback error system. Before the upgrade, Python did not perform the traceback of the erros specifying which the error was in a proper way. Here is an example:
 
 scientists = [
+
     {
         "name": {"first": "Grace", "last": "Hopper"},
         "birth": {"year": 1906, "month": 12, "day": 9},
@@ -21,30 +22,44 @@ scientists = [
         "birth": {"year": 1887},
         "death": {"month": 4, "day": 26},
     }
+    
 ]
 
-Before:
->>> scientists[1]
+***Before the update:***
+
+scientists[1]
+
 {'name': {'first': 'Euclid'}}
 
->>> dict_to_person(scientists[1])
+dict_to_person(scientists[1])
+
+
 Traceback (most recent call last):
   ...
+  
   File "/home/realpython/scientists.py", line 12, in dict_to_person
+  
     name=f"{info['name']['first']} {info['name']['last']}",
 KeyError: 'last'
 
-After:
->>> dict_to_person(scientists[0])
+
+***After the update:***
+
+dict_to_person(scientists[0])
+
 Person(name='Grace Hopper', life_span=(1906, 1992))
 
->>> scientists[1]
+scientists[1]
+
 {'name': {'first': 'Euclid'}}
 
->>> dict_to_person(scientists[1])
+dict_to_person(scientists[1])
+
 Traceback (most recent call last):
   ...
+  
   File "/home/realpython/scientists.py", line 12, in dict_to_person
+  
     name=f"{info['name']['first']} {info['name']['last']}",
                                     ~~~~~~~~~~~~^^^^^^^^
 KeyError: 'last'
