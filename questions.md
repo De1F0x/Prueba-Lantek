@@ -1,10 +1,10 @@
 Diego Miquélez de Mendiluce
 
-1. How long did you spend on the coding test? What would you add to your solution if you had more time? If you didn't spend much time on the coding test then use this as an opportunity to explain what you would add.
+***1. How long did you spend on the coding test? What would you add to your solution if you had more time? If you didn't spend much time on the coding test then use this as an opportunity to explain what you would add.***
 
 30 minutes. I have focused on doing integration testing from a developer perspective, I would have done unitary testing so I could check my code was working as expected. 
 
-2. What was the most useful feature added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
+***2. What was the most useful feature added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.***
 
 Python 3.11 added a feature improving the traceback error system. Before the upgrade, Python did not perform the traceback of the erros specifying which the error was in a proper way. Here is an example:
 
@@ -64,11 +64,11 @@ Traceback (most recent call last):
                                     ~~~~~~~~~~~~^^^^^^^^
 KeyError: 'last'
 
-3. How would you track down a performance issue in production? Have you ever had to do this?
+***3. How would you track down a performance issue in production? Have you ever had to do this?***
 
 I could review production or execution logs and check the hardware specific specs. Yes, I used to work in the maintenance area of a company checking for the logs and fixing performance issues.
 
-4. How would you improve the Lantek API that you just used?
+***4. How would you improve the Lantek API that you just used?***
 
 I would add an API so I can restart the DB to its initial values in dev/stage environments when the data was not corrupted/polluted.
 
