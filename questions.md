@@ -8,7 +8,7 @@ Diego Miquélez de Mendiluce
 
 Python 3.11 added a feature improving the traceback error system. Before the upgrade, Python did not perform the traceback of the erros specifying which the error was in a proper way. Here is an example:
 
-scientists = [
+    scientists = [
 
     {
         "name": {"first": "Grace", "last": "Hopper"},
@@ -23,46 +23,45 @@ scientists = [
         "death": {"month": 4, "day": 26},
     }
     
-]
+    ]
 
 ***Before the update:***
 
-scientists[1]
+    > scientists[1]
 
-{'name': {'first': 'Euclid'}}
+    {'name': {'first': 'Euclid'}}
 
-dict_to_person(scientists[1])
+    > dict_to_person(scientists[1])
 
-
-Traceback (most recent call last):
-  ...
+    Traceback (most recent call last):
+    ...
   
-  File "/home/realpython/scientists.py", line 12, in dict_to_person
+    File "/home/realpython/scientists.py", line 12, in dict_to_person
   
     name=f"{info['name']['first']} {info['name']['last']}",
-KeyError: 'last'
+    KeyError: 'last'
 
 
 ***After the update:***
 
-dict_to_person(scientists[0])
+    > dict_to_person(scientists[0])
 
-Person(name='Grace Hopper', life_span=(1906, 1992))
+    Person(name='Grace Hopper', life_span=(1906, 1992))
 
-scientists[1]
+    > scientists[1]
 
-{'name': {'first': 'Euclid'}}
+    {'name': {'first': 'Euclid'}}
 
-dict_to_person(scientists[1])
+    > dict_to_person(scientists[1])
 
-Traceback (most recent call last):
-  ...
+    Traceback (most recent call last):
+      ...
   
-  File "/home/realpython/scientists.py", line 12, in dict_to_person
+    File "/home/realpython/scientists.py", line 12, in dict_to_person
   
     name=f"{info['name']['first']} {info['name']['last']}",
                                     ~~~~~~~~~~~~^^^^^^^^
-KeyError: 'last'
+    KeyError: 'last'
 
 ***3. How would you track down a performance issue in production? Have you ever had to do this?***
 
